@@ -33,7 +33,7 @@ requirements:
 
 test:
   imports:
-    - dbt
+    - dbt.adapters.spark
   commands:
     - pip check
   requires:
