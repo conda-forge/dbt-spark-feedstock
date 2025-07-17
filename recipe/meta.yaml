@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -33,7 +33,7 @@ requirements:
 
 test:
   imports:
-    - dbt
+    - dbt.adapters.spark
   commands:
     - pip check
   requires:
