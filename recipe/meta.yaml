@@ -1,5 +1,5 @@
 {% set name = "dbt-spark" %}
-{% set version = "1.9.1" %}
+{% set version = "1.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: b21c017bce6c2fb9a25848f33a02ed0ea1b6170d416e3b0389e55e755a8aae2d
+  sha256: 04564d1079f9ecff733818c74e22cec94d01531ee61844e13f0a2325203cad75
 
 build:
   noarch: python
@@ -19,6 +19,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools
+    - hatchling
   run:
     - python >={{ python_min }}
     - pyhive >=0.7.0,<0.8.0
