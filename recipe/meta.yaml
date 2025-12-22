@@ -1,5 +1,5 @@
 {% set name = "dbt-spark" %}
-{% set version = "1.9.3" %}
+{% set version = "1.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 04564d1079f9ecff733818c74e22cec94d01531ee61844e13f0a2325203cad75
+  sha256: 95f4af4b5647553115eb6ca02539a3a1ad50b34bf2c6f3a766371f7de164578c
 
 build:
   noarch: python
