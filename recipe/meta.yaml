@@ -1,5 +1,5 @@
 {% set name = "dbt-spark" %}
-{% set version = "1.10.1" %}
+{% set version = "1.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: fc39d57e6bc6afc8bc75472bfd25f6d6fbfbf178c9e455e927300748270d1a5e
+  sha256: 826e823b3a0bce5ba60e6315a42880c07553ae1a09efcf820d082c5980af2619
 
 build:
   noarch: python
@@ -29,7 +29,7 @@ requirements:
     - thrift >=0.13.0
     - pyspark >=3.0.0,<4.0.0
     - sqlparse >=0.4.2 # not directly required, pinned by Snyk to avoid a vulnerability
-    - dbt-core >=1.8.0
+    - dbt-core >=1.8.0rc1,<2.0
 
 test:
   imports:
