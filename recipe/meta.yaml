@@ -1,5 +1,5 @@
 {% set name = "dbt-spark" %}
-{% set version = "1.10.3" %}
+{% set version = "1.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 3dcafb80c12bdf54da091b6e81a40c51c364a304928de418b86f48fa35fe4da4
+  sha256: 436aa57d662ebad8e56f606863e02045f73116566f85a600b9fa890a763f8c37
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - pyhive >=0.7.0,<0.8.0
-    - dbt-adapters >=1.7,<2.0
+    - dbt-adapters >=1.24.1,<2.0
     - dbt-common >=1.10,<2.0
     - sqlparams >=3.0.0
     - thrift >=0.13.0
